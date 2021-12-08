@@ -4,7 +4,6 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "performances": "tsc performances.ts  --esModuleInterop && node performances.js",
         "airdrop_compute_atom": "tsc airdrop_compute_atom.ts --esModuleInterop && node airdrop_compute_atom.js",
         "airdrop_compute_osmo": "tsc airdrop_compute_osmo.ts --esModuleInterop && node airdrop_compute_osmo.js",
         "generate_pregenesis": "tsc generate_pregenesis.ts --esModuleInterop && node generate_pregenesis.js",
