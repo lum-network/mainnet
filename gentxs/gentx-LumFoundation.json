@@ -1,0 +1,75 @@
+{
+    "body": {
+        "messages": [
+            {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                    "moniker": "Lum Foundation",
+                    "identity": "",
+                    "website": "",
+                    "security_contact": "",
+                    "details": "Lum Foundation operated validator"
+                },
+                "commission": {
+                    "rate": "1.000000000000000000",
+                    "max_rate": "1.000000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "lum1qx2dts3tglxcu0jh47k7ghstsn4nactukljgyj",
+                "validator_address": "lumvaloper1qx2dts3tglxcu0jh47k7ghstsn4nactufgmmlk",
+                "pubkey": {
+                    "@type": "/cosmos.crypto.ed25519.PubKey",
+                    "key": "8kcYQMh4H2MaykRsNLSRdOZtggqjgmHM85BwvIL1pqw="
+                },
+                "value": { "denom": "ulum", "amount": "3000000000000" }
+            }
+        ],
+        "memo": "63aca032d74f78d67538382adf4b33074ca5a6e3@10.194.111.5:26656",
+        "timeout_height": "0",
+        "extension_options": [],
+        "non_critical_extension_options": []
+    },
+    "auth_info": {
+        "signer_infos": [
+            {
+                "public_key": {
+                    "@type": "/cosmos.crypto.multisig.LegacyAminoPubKey",
+                    "threshold": 2,
+                    "public_keys": [
+                        {
+                            "@type": "/cosmos.crypto.secp256k1.PubKey",
+                            "key": "A68KQiRnyXuzMlNYU6P8Eja/BlTcgFiIDvznDQ47dqQt"
+                        },
+                        {
+                            "@type": "/cosmos.crypto.secp256k1.PubKey",
+                            "key": "A71NhVuIJtSuzuWY/vJ5WjDEUlYGtVXQGE+8O0dMhJaE"
+                        },
+                        {
+                            "@type": "/cosmos.crypto.secp256k1.PubKey",
+                            "key": "A7WdOCjqG/CvYPMZf8y6KjouLbKeCPbgYowaSuLPTvYu"
+                        },
+                        {
+                            "@type": "/cosmos.crypto.secp256k1.PubKey",
+                            "key": "Aly41/df5f7pT0MQfMKftzx/fVZlLh1BbtNLScgiX+Ag"
+                        }
+                    ]
+                },
+                "mode_info": {
+                    "multi": {
+                        "bitarray": { "extra_bits_stored": 4, "elems": "MA==" },
+                        "mode_infos": [
+                            { "single": { "mode": "SIGN_MODE_LEGACY_AMINO_JSON" } },
+                            { "single": { "mode": "SIGN_MODE_LEGACY_AMINO_JSON" } }
+                        ]
+                    }
+                },
+                "sequence": "0"
+            }
+        ],
+        "fee": { "amount": [], "gas_limit": "200000", "payer": "", "granter": "" }
+    },
+    "signatures": [
+        "CkAzdW4ZKLpN0KnXyx3PJHhXNIcqDozQizrktKTNPmLpPB4+tKK/+3N/VqDGFqtISkFJr2pexdr3pWiJL3a8nphlCkCgU0tUngfN1tyyK/it897dhr8BtHlIh+kdjufU1QnujULRA7F7Krh39deBSaCKUCEisGcnGkHMS/Uh5kLKfjXe"
+    ]
+}
