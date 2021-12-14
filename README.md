@@ -10,10 +10,17 @@ You must submit your gentx (see instructions below) by this time to be included 
 
 [./config-genesis.json](./config-genesis.json) contains the genesis configuration (without any account yet). Feel free to comment on that over Discord.
 
-### Phase 2: MainNet Genesis Launch
+### Phase 2: Genesis Launch
 December 14th, 5:00PM UTC
 
 You must have your validator up and running by this time and be available for further instructions if necessary.
+
+### Phase 3: Post Genesis launch
+The main communication channel for validators is Discord.
+
+Join the Lum Network [Discord server](https://discord.gg/KwyVvnBcXF).
+
+Upon the Genesis launch everyone can join the network freely and aim to be one of the top validators.
 
 ## Key informations
 
@@ -29,21 +36,21 @@ Available in this repository: [./genesis.json](./genesis.json)
 curl -s  https://raw.githubusercontent.com/lum-network/mainnet/master/genesis.json > ~/.lumd/config/genesis.json
 
 sha256sum ~/.lumd/config/genesis.json
-[TODO/UPCOMING]
+3bbbd7aff6c545126d869fc683f6344e65ae71b048b25540826cd2f3be91a24c
 ```
 
 ### Seed nodes
 Available here: [./seeds.txt](./seeds.txt)
 
 ```
-[TODO/UPCOMING]
+19ad16527c98b782ee35df56b65a3a251bd99971@peer-1.mainnet.lum.network
 ```
 
 ### Persistent peers
 Available here: [./persistent_peers.txt](./persistent_peers.txt)
 
 ```
-[TODO/UPCOMING]
+b47626b9d78ed7ed3c413304387026f907c70cbe@peer-0.mainnet.lum.network
 ```
 
 ### lumd version
@@ -163,7 +170,7 @@ Download Genesis file when the time is right.
 curl -s  https://raw.githubusercontent.com/lum-network/mainnet/master/genesis.json > ~/.lumd/config/genesis.json
 
 sha256sum ~/.lumd/config/genesis.json
-[TODO/UPCOMING]
+3bbbd7aff6c545126d869fc683f6344e65ae71b048b25540826cd2f3be91a24c
 ```
 
 Create a systemd file for your Lum Network service:
