@@ -1,26 +1,6 @@
 # Lum Network - MainNet
 
-You already know the drill, but you'll find all the informations here!
-
-## Timeline
-### Phase 1: Gentx submission deadline
-December 13th, 5:00PM UTC
-
-You must submit your gentx (see instructions below) by this time to be included in the genesis.
-
-[./config-genesis.json](./config-genesis.json) contains the genesis configuration (without any account yet). Feel free to comment on that over Discord.
-
-### Phase 2: Genesis Launch
-December 14th, 5:00PM UTC
-
-You must have your validator up and running by this time and be available for further instructions if necessary.
-
-### Phase 3: Post Genesis launch
-The main communication channel for validators is Discord.
-
-Join the Lum Network [Discord server](https://discord.gg/KwyVvnBcXF).
-
-Upon the Genesis launch everyone can join the network freely and aim to be one of the top validators.
+Official documentation hosted here: https://docs.lum.network
 
 ## Key informations
 
@@ -50,7 +30,7 @@ Available here: [./seeds.txt](./seeds.txt)
 Available here: [./persistent_peers.txt](./persistent_peers.txt)
 
 ```
-b47626b9d78ed7ed3c413304387026f907c70cbe@peer-0.mainnet.lum.network:26656,5ea36d78ae774c9086c2d3fc8b91f12aa4bf3029@46.101.251.76:26656,a7f8832cb8842f9fb118122354fff22d3051fb83@3.36.179.104:26656,9afac13ba62fbfaf8d06867c30007162511093c0@54.214.134.223:26656,433c60a5bc0a693484b7af26208922b84773117e@34.209.132.0:26656,8fafab32895a31a0d7f17de58eddb492c6ced6d1@185.194.219.83:36656,c06eae3d9ea779710bca44e03f57e961b59d63f1@82.65.223.126:46656
+b47626b9d78ed7ed3c413304387026f907c70cbe@peer-0.mainnet.lum.network:26656,5ea36d78ae774c9086c2d3fc8b91f12aa4bf3029@46.101.251.76:26656,a7f8832cb8842f9fb118122354fff22d3051fb83@3.36.179.104:26656,9afac13ba62fbfaf8d06867c30007162511093c0@54.214.134.223:26656,433c60a5bc0a693484b7af26208922b84773117e@34.209.132.0:26656,8fafab32895a31a0d7f17de58eddb492c6ced6d1@185.194.219.83:36656,c06eae3d9ea779710bca44e03f57e961b59d63f1@82.65.223.126:46656,4166de0e7721b6eec9c776abf2c38c40e7f820c5@202.61.239.130:26656,5a29947212a2615e43dac54deb55356a162e173a@35.181.76.160:26656
 ```
 
 ### lumd version
@@ -97,80 +77,19 @@ version: 1.0.4
 commit: e3068181b029af45bcbbe4678804b776eef6087b
 ```
 
-### Minimum hardware requirements
+## Setup your node
 
-- 4 CPU ores
-- 16 GB RAM
-- 200 GB of disk space
-- 100 mbps bandwidth
-
-## Setup validator node
-
-### Generate genesis transaction (gentx)
-
-1. Initialize the Lum Network directories and create the local genesis file with the correct chain-id:
-
-   ```sh
-   lumd init <moniker-name> --chain-id=lum-network-1
-   ```
-
-2. Create a local key pair:
-
-   ```sh
-   lumd keys add <key-name>
-   ```
-
-3. Add your account to your local genesis file with the following amount (1Mi LUM + 1 LUM) and the key you just created.
-
-   ```sh
-   lumd add-genesis-account $(lumd keys show <key-name> -a) 1000001000000ulum
-   ```
-
-4. Create the gentx, use `1000000000000ulum` (1Mi LUM):
-
-   ```sh
-   lumd gentx <key-name> 1000000000000ulum \
-       --chain-id=lum-network-1 \
-       --moniker="<moniker>" \
-       --commission-rate="0.01" \
-       --[other custom params]
-   ```
-
-   If all goes well, you will see a message similar to the following:
-
-   ```sh
-   Genesis transaction written to "/home/user/.lumd/config/gentx/gentx-******.json"
-   ```
-
-### Submit genesis transaction
-
-- Fork [the mainnet repo](https://github.com/lum-network/mainnet) into your Github account
-
-- Clone your repo using
-
-  ```bash
-  git clone https://github.com/<your-github-username>/mainnet
-  ```
-
-- Copy the generated gentx json file to `<repo_path>/gentxs/`
-
-  ```sh
-  > cd mainnet
-  > cp ~/.lumd/config/gentx/gentx-*****.json ./gentxs/gentx-<moniker-name>.json
-  ```
-
-- Commit and push to your repo
-- Create a PR onto https://github.com/lum-network/mainnet
-- Only PRs from invited validators will be accepted. This is to ensure the network successfully starts on time.
-
-## Running in production
-
-Download Genesis file when the time is right.
+Download Genesis file.
 ```sh
 curl -s  https://raw.githubusercontent.com/lum-network/mainnet/master/genesis.json > ~/.lumd/config/genesis.json
 
 sha256sum ~/.lumd/config/genesis.json
 3bbbd7aff6c545126d869fc683f6344e65ae71b048b25540826cd2f3be91a24c
+```
+
+Add seed peers and persistent peers to your config.toml
+```sh
+nano ~/.lumd/config/config.toml
 ```
 
 Create a systemd file for your Lum Network service:
@@ -217,4 +136,43 @@ Check logs:
 
 ```sh
 journalctl -u lumd -f
+```
+
+## Validator setup
+
+### Minimum hardware requirements
+
+- 4 CPU ores
+- 16 GB RAM
+- 200 GB of disk space
+- 100 mbps bandwidth
+
+### Configure minimum gas price
+Configure the minimum gas price to `minimum-gas-prices = "0.001ulum"`
+```sh
+nano ~/.lumd/config/app.toml
+```
+
+### Create validator transaction
+
+```sh
+lumd tx staking create-validator \
+  --amount=1000000ulum \
+  --pubkey=$(lumd tendermint show-validator) \
+  --moniker="my super new validator" \
+  --commission-rate="0.10" \
+  --commission-max-rate="0.20" \
+  --commission-max-change-rate="0.01" \
+  --min-self-delegation="1" \
+  --chain-id=lum-network-1
+```
+
+### Edit validator
+
+```sh
+lumd tx staking edit-validator \
+   --website="https://lum.network" \
+   --details="So luminous" \
+   --chain-id=lum-network-1 \
+
 ```
