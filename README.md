@@ -140,21 +140,22 @@ journalctl -u lumd -f
 
 ## Validator setup
 
-### Minimum hardware requirements
+### 1. Minimum hardware requirements
 
 - 4 CPU ores
 - 16 GB RAM
 - 200 GB of disk space
 - 100 mbps bandwidth
 
-### Configure minimum gas price
+### 2. Configure minimum gas price
 Configure the minimum gas price to `minimum-gas-prices = "0.001ulum"`
 ```sh
 nano ~/.lumd/config/app.toml
 ```
 
-### Create validator transaction
+### 3. Create validator transaction
 
+Set the parameters you want
 ```sh
 lumd tx staking create-validator \
   --amount=1000000ulum \
@@ -167,8 +168,7 @@ lumd tx staking create-validator \
   --chain-id=lum-network-1
 ```
 
-### Edit validator
-
+You can also edit your validator afterward
 ```sh
 lumd tx staking edit-validator \
    --website="https://lum.network" \
@@ -177,8 +177,18 @@ lumd tx staking edit-validator \
 
 ```
 
-### Validator logo
+### 4. Upload validator logo
 
 If you want your validator to have a logo displayed on the [Lum Network explorer](https://explorer.lum.network/validators), you must follow the procedure detailed here: https://github.com/lum-network/public-assets
 
 If you want to do the same for [Mintscan](https://mintscan.io/lum/validators), you must follow the similar procedure detailed here: https://github.com/cosmostation/cosmostation_token_resource
+
+
+### 5. Join Discord
+
+Once your validator is up and running you can join the private validator channel on Discord.
+
+This is the main communication channel with validators.
+
+- Join the [Lum Network Discord server](https://discord.gg/KwyVvnBcXF)
+- Ping the infrastructure-support channel to get the Validator Role and access the validator channels
