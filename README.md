@@ -176,3 +176,9 @@ lumd tx staking edit-validator \
    --chain-id=lum-network-1 \
 
 ```
+
+### Validator logo
+
+If you want your validator to have a logo displayed on the [Lum Network explorer](https://explorer.lum.network/validators), you must follow the procedure detailed here: https://github.com/lum-network/public-assets
+
+If you want to do the same for [Mintscan](https://mintscan.io/lum/validators), you must follow the similar procedure detailed here: https://github.com/cosmostation/cosmostation_token_resource
