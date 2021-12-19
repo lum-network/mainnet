@@ -10,6 +10,7 @@ This upgrade to v1.0.5 alongside Osmosis' upgrade (which will happen the same da
 - WARNING: Upgrading prior to this block and this message WILL literally make your node good for a full hard reset, you really don't want to do that
 - Once you receive this message you must upgrade you node:
 ```
+git pull
 git checkout v1.0.5
 go mod tidy
 make
