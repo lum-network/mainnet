@@ -1,9 +1,9 @@
-# Description
+## Description
 The main-net of the Lum Network was launched on Dec. 14th. The same day Osmosis ran an update as well which broke the capability to create IBC channels between Osmosis and Lum Network. Thus preventing us from creating liquidity pools on the Osmosis platform.
 
 This upgrade to v1.0.5 alongside Osmosis' upgrade (which will happen the same day) is intended to fix this IBC integration issue and enable our networks to communicate.
 
-# How to upgrade
+## How to upgrade
 - This upgrade is scheduled for `Monday Dec. 20 at around 17:00 UTC`
 - The exact target block is `90300`
 - Upon reaching this block you will see a message `ERR UPGRADE "v1.0.5" NEEDED at height: 90300` and `ERR CONSENSUS FAILURE!!!`
@@ -18,7 +18,7 @@ sudo systemctl restart lumd
 ```
 - If it succeeds you should see it in the logs `journalctl -u lumd -f`
 
-# Upgrade details
+## Upgrade details
 Critical upgrade that fixes issues related to the Staking module and IBC:
 - Upgrade to IBC v2
 - Fix Staking module initialization
@@ -28,7 +28,7 @@ Side improvements:
 - Always enable api and telemetry
 - Backport sync and node info rest endpoints for compatibility purpose
 
-# Install and setup Cosmovisor
+## Install and setup Cosmovisor
 
 We highly recommend validators use cosmovisor to run their nodes. This will make low-downtime upgrades smoother,
 as validators don't have to manually upgrade binaries during the upgrade, and instead can preinstall new binaries, and
@@ -77,7 +77,7 @@ echo "export DAEMON_RESTART_AFTER_UPGRADE=true" >> ~/.profile
 source ~/.profile
 ```
 
-# Prepare lumd to run with cosmovisor
+## Prepare lumd to run with cosmovisor
 
 move the current lumd binary into the cosmovisor/genesis/bin folder.
 
