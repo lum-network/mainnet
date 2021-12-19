@@ -112,6 +112,7 @@ To prepare for the upgrade, you need to build & install the new binary and move 
 git clone https://github.com/lum-network/chain && cd chain
 git checkout v1.0.5
 make
+make install
 lumd version
 1.0.5
 ```
