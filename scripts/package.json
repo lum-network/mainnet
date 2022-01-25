@@ -6,13 +6,14 @@
         "airdrop_compute_atom": "tsc airdrop_compute_atom.ts --esModuleInterop && node airdrop_compute_atom.js",
         "airdrop_compute_osmo": "tsc airdrop_compute_osmo.ts --esModuleInterop && node airdrop_compute_osmo.js",
         "generate_pregenesis": "tsc generate_pregenesis.ts --esModuleInterop && node generate_pregenesis.js",
-        "generate_genesis": "tsc generate_genesis.ts --esModuleInterop && node generate_genesis.js"
+        "generate_genesis": "tsc generate_genesis.ts --esModuleInterop && node generate_genesis.js",
+        "export_validators": "tsc export_validators.ts --esModuleInterop && node export_validators.js"
     },
     "devDependencies": {
         "@types/node": "^16.11.7"
     },
     "dependencies": {
-        "@lum-network/sdk-javascript": "^0.7.0",
+        "@lum-network/sdk-javascript": "^0.7.3",
         "fast-csv": "^4.3.6",
         "typescript": "^4.4.4"
     }
