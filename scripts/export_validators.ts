@@ -45,7 +45,7 @@ const fetchAllStakingValidators = async (lumClt: LumClient) => {
 };
 
 const fetchAllDelegationsFrom = async (lumClt: LumClient, addr: string) => {
-    if (addr === '') {
+    if (!addr || addr === '') {
         return [];
     }
     let delegations = [];
