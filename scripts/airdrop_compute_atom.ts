@@ -114,9 +114,7 @@ const main = () => {
     console.log('Atom export parsed with success:');
     console.log(`- ${processedTotal} addresses accepted (${processedUnique} unique)`);
     console.log(`- ${processedUatom} uatom accepted, ${unprocessedUatom} uatom rejected`);
-    console.log(
-        `- ${unprocessedValidators} rejected from validators, ${unprocessedDelegators} rejected from delegators`
-    );
+    console.log(`- ${unprocessedValidators} rejected from validators, ${unprocessedDelegators} rejected from delegators`);
 
     console.log('Computing ulum from uatom...');
     // Iterate a first time to remove addresses below min cap and compute ratio
@@ -141,11 +139,7 @@ const main = () => {
     console.log(`- ulum dropped: ${ulumDropped}`);
     console.log(`- ulum remaining dust: ${ulumAvailable - ulumDropped}`);
 
-    console.log(
-        `Giving remaining ${
-            ulumAvailable - ulumDropped
-        } ulum dust to cosmos1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vvf589n (because why not...)`
-    );
+    console.log(`Giving remaining ${ulumAvailable - ulumDropped} ulum dust to cosmos1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vvf589n (because why not...)`);
     entries['cosmos1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vvf589n'].ulum += ulumAvailable - ulumDropped;
 
     console.log('Writing output...');

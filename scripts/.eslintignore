@@ -1,0 +1,4 @@
+node_modules/
+snapshots/
+*.d.ts
+*.js

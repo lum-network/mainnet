@@ -90,13 +90,7 @@ const main = () => {
             }
         }
         if (uosmoAmount > 0) {
-            pools[info.totalShares.denom] = new Pool(
-                info.id,
-                parseInt(info.totalShares.amount, 10),
-                parseInt(info.totalWeight, 10),
-                uosmoWeight,
-                uosmoAmount
-            );
+            pools[info.totalShares.denom] = new Pool(info.id, parseInt(info.totalShares.amount, 10), parseInt(info.totalWeight, 10), uosmoWeight, uosmoAmount);
         } else {
             rejectedPools.push(info.id);
         }
@@ -156,11 +150,7 @@ const main = () => {
     console.log(`- ulum dropped: ${ulumDropped}`);
     console.log(`- ulum remaining dust: ${ulumAvailable - ulumDropped}`);
 
-    console.log(
-        `Giving remaining ${
-            ulumAvailable - ulumDropped
-        } ulum dust to osmo1t8qckan2yrygq7kl9apwhzfalwzgc242lk02ch (because why not...)`
-    );
+    console.log(`Giving remaining ${ulumAvailable - ulumDropped} ulum dust to osmo1t8qckan2yrygq7kl9apwhzfalwzgc242lk02ch (because why not...)`);
     entries['osmo1qqtywra8ar6uea24426rr2wrn9gh93knh3mh0h'].ulum += ulumAvailable - ulumDropped;
 
     console.log('Writing output...');

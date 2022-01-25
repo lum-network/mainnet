@@ -62,11 +62,7 @@ const loadAirdrop = async (wallets: Wallets, filepath: string, free_ratio: numbe
                 addressesCount++;
             })
             .on('end', () => {
-                console.log(
-                    `Atom airdrop parsed with success: ${addressesCount} addresses, ${ulumTotal / 1_000_000} LUM (${
-                        ulumFreeTotal / 1_000_000
-                    } free upon claim)`
-                );
+                console.log(`Atom airdrop parsed with success: ${addressesCount} addresses, ${ulumTotal / 1_000_000} LUM (${ulumFreeTotal / 1_000_000} free upon claim)`);
                 resolve();
             });
     });
@@ -199,9 +195,7 @@ const generatePregenesis = (wallets: Wallets, genesisConfigFilepath: string, pre
                     ],
                     delegated_free: [],
                     delegated_vesting: [],
-                    end_time: `${
-                        vestingStartTimestamp + VESTING_DURATION_SEC + (w.has_vesting_cliff ? CLIFF_DURATION_SEC : 0)
-                    }`,
+                    end_time: `${vestingStartTimestamp + VESTING_DURATION_SEC + (w.has_vesting_cliff ? CLIFF_DURATION_SEC : 0)}`,
                 },
                 start_time: `${vestingStartTimestamp + (w.has_vesting_cliff ? CLIFF_DURATION_SEC : 0)}`,
             });
