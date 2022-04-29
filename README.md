@@ -39,13 +39,13 @@ b47626b9d78ed7ed3c413304387026f907c70cbe@peer-0.mainnet.lum.network:26656,5ea36d
 $ lumd version --long
 name: lum
 server_name: lumd
-version: 1.0.4
-commit: e3068181b029af45bcbbe4678804b776eef6087b
+version: 1.1.0
+commit: d8f3696d5973e6f299f1dd7517f39c033649ee96
 ```
 
 ## Installation
 
-**Prerequisites:** Make sure to have [Golang >=1.17](https://golang.org/).
+**Prerequisites:** Make sure to have [Golang >=1.18](https://golang.org/).
 
 ### Make sure your Go configuration looks like that one (especially the GO111Module):
 
@@ -61,7 +61,7 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```sh
 git clone https://github.com/lum-network/chain.git
 cd chain
-git checkout v1.0.4
+git checkout v1.1.0
 make install
 ```
 
@@ -73,8 +73,8 @@ lumd version --long
 ```
 name: lum
 server_name: lumd
-version: 1.0.4
-commit: e3068181b029af45bcbbe4678804b776eef6087b
+version: 1.1.0
+commit: d8f3696d5973e6f299f1dd7517f39c033649ee96
 ```
 
 ## Setup your node
