@@ -22,7 +22,7 @@ We have already verified and compared it between 3 full validator nodes, but oth
 Steps to reproduce:
   - Stop your lum service
   - Upgrade binary to v1.1.3
-  - Run lumd export &> genesis-export.json
+  - Run `lumd export --home {LUMD_HOME} &> genesis-export.json`
   - Pretty the json output
     - `cat genesis-export.json | python3 -m json.tool > genesis-export-pretty.json`
   - Replace the faulty timestamp for Beam with ID `3b07374f-29bf-47cc-9f3f-988a4bafec75`
@@ -30,7 +30,7 @@ Steps to reproduce:
     - Find the Beam with ctrl+w then type `3b07374f` + enter
     - Replace the created_at value with `2022-04-28T18:50:38.000000000Z`
     - save and exit with ctrl+x + enter
-  - sha256sum genesis-export-pretty.json -> `8a327bbbcee02f19733160b1fb853e32edf83d3e9139486dfd2781ff0567c3a2`
+  - `sha256sum genesis-export-pretty.json` -> 8a327bbbcee02f19733160b1fb853e32edf83d3e9139486dfd2781ff0567c3a2
 
 ## [MANDATORY] Upgrade procedure
 
@@ -39,19 +39,19 @@ Steps to reproduce:
   - We will provide backups anyway but please keep in mind that you are responsible for you node operation and that some data cannot be recovered by public backups such as your validator key & state
 - Stop your lumd process systemctl stop lumd
 - Install version 1.1.3
-  - git checkout master
-  - git pull
-  - git checkout v1.1.3
-  - make install
-  - lumd version -> `v1.1.3`
+  - `git checkout master`
+  - `git pull`
+  - `git checkout v1.1.3`
+  - `make install`
+  - `lumd version` -> v1.1.3
 - Download the new genesis state
   - `wget -O genesis-1960665.json https://github.com/lum-network/mainnet/blob/master/upgrades/v1.1.3/genesis-1960665.json?raw=true`
-  - sha256sum genesis-1960665.json -> `8a327bbbcee02f19733160b1fb853e32edf83d3e9139486dfd2781ff0567c3a2`
-  - cp genesis-1960665.json {LUMD_HOME}/config/genesis.json (replace LUMD HOME with your own lumd home folder)
+  - `sha256sum genesis-1960665.json` -> 8a327bbbcee02f19733160b1fb853e32edf83d3e9139486dfd2781ff0567c3a2
+  - `cp genesis-1960665.json {LUMD_HOME}/config/genesis.json`
 - Unsafe reset your node
-  - lumd unsafe-reset-all
+  - `lumd unsafe-reset-all --home {LUMD_HOME}`
 - Restart your node
-  - systemctl restart lumd
+  - `systemctl restart lumd`
 
 ### Check that your upgrade is working
 
