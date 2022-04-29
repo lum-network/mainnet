@@ -45,7 +45,7 @@ Steps to reproduce:
   - make install
   - lumd version -> `v1.1.3`
 - Download the new genesis state
-  - wget -O genesis-1960665.json https://raw.githubusercontent.com/lum-network/mainnet/master/upgrades/v1.1.3/genesis-1960665.json
+  - `wget -O genesis-1960665.json https://github.com/lum-network/mainnet/blob/master/upgrades/v1.1.3/genesis-1960665.json?raw=true`
   - sha256sum genesis-1960665.json -> `8a327bbbcee02f19733160b1fb853e32edf83d3e9139486dfd2781ff0567c3a2`
   - cp genesis-1960665.json {LUMD_HOME}/config/genesis.json (replace LUMD HOME with your own lumd home folder)
 - Unsafe reset your node
