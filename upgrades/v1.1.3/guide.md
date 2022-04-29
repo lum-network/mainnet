@@ -50,6 +50,7 @@ Steps to reproduce:
   - `cp genesis-1960665.json {LUMD_HOME}/config/genesis.json`
 - Unsafe reset your node
   - `lumd unsafe-reset-all --home {LUMD_HOME}`
+- Upgrade your peers list using the [updated list](/persistent_peers.txt)
 - Restart your node
   - `systemctl restart lumd`
 
