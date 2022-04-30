@@ -36,7 +36,7 @@ Steps to reproduce:
 
 - You should make a copy of your disk or at least your lumd HOME folder
   - This is not mandatory but highly recommended
-  - We will provide backups anyway but please keep in mind that you are responsible for you node operation and that some data cannot be recovered by public backups such as your validator key & state
+  - We will provide backups anyway but please keep in mind that you are responsible for your node operation and that some data cannot be recovered by public backups such as your validator key & state
 - Stop your lumd process systemctl stop lumd
 - Install version 1.1.3
   - `git checkout master`
