@@ -73,6 +73,8 @@ This solution steps are described in the [v1.1.3 upgrade guide](./guide.md).
 
 Since the application state was inconsistent between validators we also provided a way to reproduce the exact same genesis that we exported from the Lum Network nodes. Thus ensuring no edition beyond what was strictly necessary occureed during the export. This verification process is immutable and still available for anyone willing to reproduce it.
 
+*Note: we decided and made sure not to have to change the chain-id during this upgrade. This was a key decision since chaning the chain-id brings more issues than actual solutions, especially when it comes to IBC.*
+
 ## Conclusion
 
 - Documentation and opensource knowledge is key, thanks to all the projects who documented properly postmortem their chain halt issues
