@@ -13,11 +13,11 @@ Postmortem report regarding the chain halt which happened post v1.1.0 update and
 ## Issue details
 
 ### Description
-The issue was caused by a line of code in the Beam module causing the state machine to store `non-deterministic` data in the key value store.
+The issue was caused by a line of code in the Beam module causing the state machine to store `non-deterministic` data in the key-value store.
  
 Since the transaction and the block triggering this issue were valid they were accepted by the network and considered the highest block height for the chain.
 
-But since the code created `non-deterministic` data and stored it into the key value store it led all validators to have a different AppHash which is required by the consensus algorithm to determine the validity of a proposed block.
+But since the code created `non-deterministic` data and stored it in the key-value store it led all validators to have a different AppHash which is required by the consensus algorithm to determine the validity of a proposed block.
 
 In more simple terms, a valid transaction and a valid block were produced but the outcome of delivering the transactions for this block led to an inconsistent state machine across the whole validator set.
 
@@ -47,11 +47,11 @@ But the challenge was to actually "restart" the network and produce new blocks w
 *Have validators upgrade their binary and restart it*
 
 1. Naive test to see if the nodes would catch up and resume block pre-vote
-    - Does not work since the key value store has already been updated
+    - Does not work since the key-value store has already been updated
     - We expected this outcome but it was worth a try and fairly quick to confirm
-2. Had a temporary hook at launch to override the faulty state in the key value store
-    - Does not work since it is either impossible or corrupts the key value store
-    - Might be worth another try with more complex hooks but we estimated the time to achieve a viable and safe solution not worth the effort. Moreover this solution requires to mess with the state machine which is likely to produce undesired side effects
+2. Had a temporary hook at launch to override the faulty state in the key-value store
+    - Does not work since it is either impossible or corrupts the key-value store
+    - Might be worth another try with more complex hooks but we estimated the time to achieve a viable and safe solution not worth the effort. Moreover, this solution requires messing with the state machine which is likely to produce undesired side effects
 
 ### Rollback one block (fail)
 *Have validators upgrade their binary, rollback one block and restart it*
@@ -60,7 +60,7 @@ We discovered a new [rollback command](https://github.com/cosmos/cosmos-sdk/pull
 
 The rollback command was executed on all testnet nodes and succeeded. 
 
-But restarting the nodes binary led to an instant panic at start apparently due to files corruption. We are not sure at the time of writting why this panic occured but after a few tries we decided to reject this option since the logs were not helpful, the feature is still in its infancy and not much feedback on using this feature was available.
+But restarting the nodes binary led to an instant panic at the start apparently due to file corruption. We are not sure at the time of writing why this panic occurred but after a few tries we decided to reject this option since the logs were not helpful, the feature is still in its infancy and not much feedback on using this feature was available.
 
 ### Hard fork with a new Genesis (success)
 *Have validators upgrade their binary and restart from a new genesis*
