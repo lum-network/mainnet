@@ -61,7 +61,7 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```sh
 git clone https://github.com/lum-network/chain.git
 cd chain
-git checkout v1.1.0
+git checkout v1.2.0
 make install
 ```
 
@@ -73,8 +73,8 @@ lumd version --long
 ```
 name: lum
 server_name: lumd
-version: 1.1.0
-commit: d8f3696d5973e6f299f1dd7517f39c033649ee96
+version: 1.2.0
+commit: ad3002d5289c709820ecdfbe5e006d1e773b7197
 ```
 
 ## Setup your node
