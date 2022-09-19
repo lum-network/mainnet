@@ -92,7 +92,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$GOPATH/bin/cosmovisor start
+ExecStart=$GOPATH/bin/cosmovisor run start --home $HOME/.lumd
 Restart=always
 RestartSec=3
 LimitNOFILE=4096
