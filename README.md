@@ -39,8 +39,8 @@ b47626b9d78ed7ed3c413304387026f907c70cbe@peer-0.mainnet.lum.network:26656,6d0df6
 $ lumd version --long
 name: lum
 server_name: lumd
-version: 1.1.0
-commit: d8f3696d5973e6f299f1dd7517f39c033649ee96
+version: 1.3.0
+commit: 2c7d1a3fddbaa9d39eb24b53962ed0094fc33128
 ```
 
 ## Installation
@@ -73,8 +73,8 @@ lumd version --long
 ```
 name: lum
 server_name: lumd
-version: 1.2.0
-commit: ad3002d5289c709820ecdfbe5e006d1e773b7197
+version: 1.3.0
+commit: 2c7d1a3fddbaa9d39eb24b53962ed0094fc33128
 ```
 
 ## Setup your node
