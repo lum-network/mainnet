@@ -4,7 +4,7 @@ This pull request introduces the Cosmos SDK v0.46.6 upgrade, authorize more deno
 
 Key added items:
 
-- Bring the Cosmos SDK v0.46.6
+- Bring the Cosmos SDK v0.46.7
 - Revamp the module account authorization list
 - Fix Bech32 custom prefix registration
 - Allows more DFract denoms to be used on the deposit
