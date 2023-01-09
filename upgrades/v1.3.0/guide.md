@@ -23,6 +23,7 @@ Key added items:
   - `make`
   - `lumd version`
     - `1.3.0`
+    - `2c7d1a3fddbaa9d39eb24b53962ed0094fc33128`
   - `sudo systemctl restart lumd`
 - If it succeeds you should see it in the logs `journalctl -u lumd -f `
 
