@@ -11,8 +11,8 @@ The PR content can be browsed at https://github.com/lum-network/chain/pull/21
 ## How to upgrade
 
 - This upgrade is scheduled for Wednesday `January. 25 around 16 UTC`
-- The exact target block is `5861111`
-- Upon reaching this block you will see a message `ERR UPGRADE "v1.3.1" NEEDED at height: 5861111` and `ERR CONSENSUS FAILURE!!!`
+- The exact target block is `5890500`
+- Upon reaching this block you will see a message `ERR UPGRADE "v1.3.1" NEEDED at height: 5890500` and `ERR CONSENSUS FAILURE!!!`
 - WARNING: Upgrading prior to this block and this message WILL literally make your node good for a full hard reset, you really don't want to do that
 - Once you receive this message you must upgrade you node:
   - `git pull`
