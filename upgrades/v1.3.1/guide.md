@@ -20,6 +20,7 @@ The PR content can be browsed at https://github.com/lum-network/chain/pull/21
   - `make`
   - `lumd version`
     - `1.3.1`
+    - `8598401213424174535d8c13ecec134bd8d3fe44`
   - `sudo systemctl restart lumd`
 - If it succeeds you should see it in the logs `journalctl -u lumd -f `
 
