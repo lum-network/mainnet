@@ -61,7 +61,7 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```sh
 git clone https://github.com/lum-network/chain.git
 cd chain
-git checkout v1.2.0
+git checkout v1.3.1
 make install
 ```
 
@@ -73,7 +73,7 @@ lumd version --long
 ```
 name: lum
 server_name: lumd
-version: 1.3.0
+version: 1.3.1
 commit: 2c7d1a3fddbaa9d39eb24b53962ed0094fc33128
 ```
 
@@ -90,6 +90,11 @@ sha256sum ~/.lumd/config/genesis.json
 Add seed peers and persistent peers to your config.toml
 ```sh
 nano ~/.lumd/config/config.toml
+```
+
+Edit ~/.lumd/config/app.toml to update the minimum gas prices, 1 ulum is just an example
+```sh
+minimum-gas-prices = "1ulum"
 ```
 
 Create a systemd file for your Lum Network service:
