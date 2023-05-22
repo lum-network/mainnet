@@ -39,8 +39,8 @@ b47626b9d78ed7ed3c413304387026f907c70cbe@peer-0.mainnet.lum.network:26656,6d0df6
 $ lumd version --long
 name: lum
 server_name: lumd
-version: 1.3.0
-commit: 2c7d1a3fddbaa9d39eb24b53962ed0094fc33128
+version: 1.4.0
+commit: 7aef762569a35fcd6ecd2759c99bbc82a318b650
 ```
 
 ## Installation
@@ -61,7 +61,7 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```sh
 git clone https://github.com/lum-network/chain.git
 cd chain
-git checkout v1.2.0
+git checkout v1.4.0
 make install
 ```
 
@@ -73,8 +73,8 @@ lumd version --long
 ```
 name: lum
 server_name: lumd
-version: 1.3.0
-commit: 2c7d1a3fddbaa9d39eb24b53962ed0094fc33128
+version: 1.4.0
+commit: 7aef762569a35fcd6ecd2759c99bbc82a318b650
 ```
 
 ## Setup your node
