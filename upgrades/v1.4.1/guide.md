@@ -12,7 +12,7 @@ This pull request fixes the pruning by patching the ICAController store
 
 The PR content can be browsed at https://github.com/lum-network/chain/pull/24
 
-**Optional: **check [v1.4.2 upgrade guide](https://github.com/lum-network/mainnet/blob/master/upgrades/v1.4.2/guide.md) for more information on v1.4.1 and v1.4.2 differences.
+**Optional:** check [v1.4.2 upgrade guide](https://github.com/lum-network/mainnet/blob/master/upgrades/v1.4.2/guide.md) for more information on v1.4.1 and v1.4.2 differences.
 
 ## How to upgrade
 
