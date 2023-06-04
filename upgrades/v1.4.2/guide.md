@@ -34,6 +34,8 @@ Please replace $LUMD_HOME with the home folder for your node (ex: `~/.lumd`) and
 **2. Download state sync from block #7799476**
   - `cd $LUMD_HOME`
   - `wget https://storage.googleapis.com/lum-network.appspot.com/snapshots/lum-snapshot-7799476.tar.gz`
+  - `sha256sum lum-snapshot-7799476.tar.gz`
+    - `55e6c23c4d70ead527aaae0392beb98211deb48ec989f0f1a8d28348241aef02`
 
 **3. (Validators only) Backup your `priv_validator_state.json` located in your `data` folder**
   - `cp data/priv_validator_state.json backup_priv_validator_state.json`
