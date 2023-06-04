@@ -1,8 +1,18 @@
+## ⚠️ v1.4.1 has been replaced by v1.4.2 - read guide carefully ⚠️
+
+Version v1.4.1 will break your node on block #7799476, do not use it.
+
+You must use v1.4.2 instead, as described in this guide.
+
+If your node is in a clean state at block #7740000 (the block height for v1.4.1 upgrade) you can use v1.4.2 by following this upgrade guide.
+
 ## Description
 
 This pull request fixes the pruning by patching the ICAController store
 
 The PR content can be browsed at https://github.com/lum-network/chain/pull/24
+
+**Optional: **check [v1.4.2 upgrade guide](https://github.com/lum-network/mainnet/blob/master/upgrades/v1.4.2/guide.md) for more information on v1.4.1 and v1.4.2 differences.
 
 ## How to upgrade
 
@@ -12,11 +22,11 @@ The PR content can be browsed at https://github.com/lum-network/chain/pull/24
 - WARNING: Upgrading prior to this block and this message WILL literally make your node good for a full hard reset, you really don't want to do that
 - Once you receive this message you must upgrade you node:
   - `git pull`
-  - `git checkout v1.4.1`
+  - `git checkout v1.4.2`
   - `make install`
   - `lumd version`
-    - `1.4.1`
-    - `c1543c790072c6c09ad7bd3889b1a6df973c0c4f`
+    - `1.4.2`
+    - `c65be31156dff3217e1d85099debc324d56626a7`
   - `sudo systemctl restart lumd`
 - If it succeeds you should see it in the logs `journalctl -u lumd -f `
 
