@@ -7,7 +7,7 @@ Version is bumped from v1.4.2 to v1.4.5 directly to ensure consistence with publ
 
 - This upgrade is scheduled for Wednesday `June 15th around 16:30 UTC`
 - The exact target block is `7950600`
-- Upon reaching this block you will see a message `ERR UPGRADE "v1.4.0" NEEDED at height: 7950600` and `ERR CONSENSUS FAILURE!!!`
+- Upon reaching this block you will see a message `ERR UPGRADE "v1.4.5" NEEDED at height: 7950600` and `ERR CONSENSUS FAILURE!!!`
 - WARNING: Upgrading prior to this block and this message WILL literally make your node good for a full hard reset, you really don't want to do that
 - Once you receive this message you must upgrade you node:
   - `git pull`
