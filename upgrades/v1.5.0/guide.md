@@ -36,11 +36,11 @@ This Pull Request introduces numerous changes over the whole Lum Network codebas
 - WARNING: Upgrading prior to this block and this message WILL literally make your node good for a full hard reset, you really don't want to do that
 - Once you receive this message you must upgrade you node:
   - `git pull`
-  - `git checkout v1.5.0`
+  - `git checkout v1.5.0-2`
   - `make install`
   - `lumd version`
-    - `1.5.0`
-    - `9aa98e57fe9e774983271e0724176a683eec8bf6`
+    - `1.5.0-2`
+    - `4877cbf7f419fe5e2e1f4d3f7af730a23b66bb1a`
   - `sudo systemctl restart lumd`
 - If it succeeds you should see it in the logs `journalctl -u lumd -f `
 
