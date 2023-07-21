@@ -8,9 +8,9 @@ This proposal fixes an issue introduced in the previous update and update Millio
 
 ## How to upgrade
 
-- This upgrade is scheduled for Wednesday `Friday, July 21th around 15:45 UTC.`
-- The exact target block is `8481400`
-- Upon reaching this block you will see a message `ERR UPGRADE "v1.5.1" NEEDED at height: 8481400` and `ERR CONSENSUS FAILURE!!!`
+- This upgrade is scheduled for Wednesday `Monday, July 24th around 18:00 UTC.`
+- The exact target block is `8527300`
+- Upon reaching this block you will see a message `ERR UPGRADE "v1.5.1" NEEDED at height: 8527300` and `ERR CONSENSUS FAILURE!!!`
 - WARNING: Upgrading prior to this block and this message WILL literally make your node good for a full hard reset, you really don't want to do that
 - Once you receive this message you must upgrade you node:
   - `git pull`
