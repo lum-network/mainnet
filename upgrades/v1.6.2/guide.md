@@ -14,11 +14,11 @@ This software upgrade is required to adopt the following changes:
 - WARNING: Upgrading prior to this block and this message WILL literally make your node good for a full hard reset, you really don't want to do that
 - Once you receive this message you must upgrade you node:
   - `git pull`
-  - `git checkout v1.6.2`
+  - `git checkout v1.6.2-1`
   - `make install`
   - `lumd version`
-    - `1.6.2`
-    - `f603addaf4e71809871763b0faecd570d39a2a6a`
+    - `1.6.2-1`
+    - `b58daf2777aa75d0162c5c90eed602b370a243bf`
   - `sudo systemctl restart lumd`
 - If it succeeds you should see it in the logs `journalctl -u lumd -f `
 
