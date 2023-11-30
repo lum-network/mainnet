@@ -19,7 +19,7 @@ This software upgrade is required to adopt the following changes:
   - `make install`
   - `lumd version`
     - `1.6.3`
-    - `926a0f43e19354a5209a3ffd33528d3bdb387ffc`
+    - `4f4349bef967279608cd0cc88e4caadbd12e785c`
   - `sudo systemctl restart lumd`
 - If it succeeds you should see it in the logs `journalctl -u lumd -f `
 
