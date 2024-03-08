@@ -19,7 +19,7 @@ Full PR here https://github.com/lum-network/chain/pull/72
   - `make install`
   - `lumd version`
     - `1.6.5`
-    - ``
+    - `255e6e549f3ab50cd24b6b7bfbe72167aadd4e2e`
   - `sudo systemctl restart lumd`
 - If it succeeds you should see it in the logs `journalctl -u lumd -f `
 
